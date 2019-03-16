@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 var dataClientRouter = require('./routes/dataclient');
 var modelClientRouter = require('./routes/modelclient');
 var computingClientRouter = require('./routes/computingclient');
+var Web3 = require('web3');
 
 var app = express();
 
@@ -31,12 +32,21 @@ app.use('/computingclient', computingClientRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+    next(createError(404));
 });
 
 // error handler
 app.use(function(err, req, res, next) {
-  res.sendfile(__dirname + '/routes/pages/404.html')
+    res.sendfile(__dirname + '/routes/pages/404.html')
 });
+
+var web3 = undefined;
+if (typeof web3 !== 'undefined') {
+    web3 = new Web3(web3.currentProvider);
+} else {
+    // set the provider you want from Web3.providers
+    web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+}
+global.web3 = web3;
 
 module.exports = app;
