@@ -37,16 +37,18 @@ app.use(function(req, res, next) {
 
 // error handler
 app.use(function(err, req, res, next) {
-    res.sendfile(__dirname + '/routes/pages/404.html')
+    res.sendfile(__dirname + '/routes/pages/404.html');
 });
 
 // web3 define
 var web3 = undefined;
 if (typeof web3 !== 'undefined') {
+    console.log("web3 !== 'undefined'");
     web3 = new Web3(web3.currentProvider);
 } else {
     // set the provider you want from Web3.providers
     web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+    console.log("web3 == 'undefined'  and localhost:8545");
 }
 
 global.web3 = web3;
