@@ -249,7 +249,7 @@
         console.log("hello");
 
         $.ajax({
-            url:interfaceAddress+'/modelclient/monitordataclient',
+            url:getMonitorServer()+'/modelclient/monitordataclient',
             type:'post',
             dataType : 'text', // use json instead of text
             data: "",

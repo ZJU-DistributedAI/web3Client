@@ -4,11 +4,17 @@
     <list default="true" id="cd0d7e07-f337-4df3-aef6-69e677b33e4f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/js/constant.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/js/constant.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/computingclient.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/computingclient.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/dataclient.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/dataclient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/modelclient.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/modelclient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/pages/computing_data_ask.html" beforeDir="false" afterPath="$PROJECT_DIR$/routes/pages/computing_data_ask.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/pages/computing_model_ask.html" beforeDir="false" afterPath="$PROJECT_DIR$/routes/pages/computing_model_ask.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/pages/data_computing_agree.html" beforeDir="false" afterPath="$PROJECT_DIR$/routes/pages/data_computing_agree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/pages/data_model_ask.html" beforeDir="false" afterPath="$PROJECT_DIR$/routes/pages/data_model_ask.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/pages/dataclientwallet.html" beforeDir="false" afterPath="$PROJECT_DIR$/routes/pages/dataclientwallet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/pages/model_available_data.html" beforeDir="false" afterPath="$PROJECT_DIR$/routes/pages/model_available_data.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,30 +26,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/users.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-468">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/modelclient.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="354">
+              <caret line="111" column="3" selection-start-line="111" selection-start-column="3" selection-end-line="111" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/pages/data_computing_agree.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="204">
+              <caret line="255" column="28" selection-start-line="255" selection-start-column="28" selection-end-line="255" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -51,26 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/computingclient.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/dataclient.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+            <state relative-caret-position="354">
+              <caret line="133" column="3" selection-start-line="133" selection-start-column="3" selection-end-line="133" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -93,14 +72,9 @@
         <option value="$PROJECT_DIR$/routes/pages/404.html" />
         <option value="$PROJECT_DIR$/routes/pages/blank.html" />
         <option value="$PROJECT_DIR$/routes/pages/charts.html" />
-        <option value="$PROJECT_DIR$/routes/pages/computing_data_ask.html" />
-        <option value="$PROJECT_DIR$/routes/pages/computing_model_ask.html" />
         <option value="$PROJECT_DIR$/routes/pages/computing_train.html" />
         <option value="$PROJECT_DIR$/routes/pages/computingclientwallet.html" />
         <option value="$PROJECT_DIR$/routes/pages/createwallet.html" />
-        <option value="$PROJECT_DIR$/routes/pages/data_computing_agree.html" />
-        <option value="$PROJECT_DIR$/routes/pages/data_model_ask.html" />
-        <option value="$PROJECT_DIR$/routes/pages/dataclientwallet.html" />
         <option value="$PROJECT_DIR$/routes/pages/download_tool.html" />
         <option value="$PROJECT_DIR$/routes/pages/forgot-password.html" />
         <option value="$PROJECT_DIR$/routes/pages/home.html" />
@@ -108,17 +82,22 @@
         <option value="$PROJECT_DIR$/routes/pages/indexdata.html" />
         <option value="$PROJECT_DIR$/routes/pages/indexmodel.html" />
         <option value="$PROJECT_DIR$/routes/pages/login.html" />
-        <option value="$PROJECT_DIR$/routes/pages/model_available_data.html" />
         <option value="$PROJECT_DIR$/routes/pages/modelclientwallet.html" />
         <option value="$PROJECT_DIR$/routes/pages/tables.html" />
-        <option value="$PROJECT_DIR$/public/static/js/constant.js" />
         <option value="$PROJECT_DIR$/routes/pages/gulpfile.js" />
-        <option value="$PROJECT_DIR$/routes/dataclient.js" />
-        <option value="$PROJECT_DIR$/routes/computingclient.js" />
         <option value="$PROJECT_DIR$/routes/users.js" />
         <option value="$PROJECT_DIR$/routes/modelclient.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/routes/pages/dataclientwallet.html" />
+        <option value="$PROJECT_DIR$/public/static/js/constant.js" />
+        <option value="$PROJECT_DIR$/routes/pages/data_model_ask.html" />
+        <option value="$PROJECT_DIR$/routes/pages/computing_data_ask.html" />
+        <option value="$PROJECT_DIR$/routes/pages/computing_model_ask.html" />
+        <option value="$PROJECT_DIR$/routes/dataclient.js" />
+        <option value="$PROJECT_DIR$/routes/pages/model_available_data.html" />
+        <option value="$PROJECT_DIR$/routes/computingclient.js" />
+        <option value="$PROJECT_DIR$/routes/pages/data_computing_agree.html" />
       </list>
     </option>
   </component>
@@ -161,6 +140,12 @@
               <item name="web3Client" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="web3Client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web3Client" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -175,6 +160,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -205,30 +191,31 @@
       <option name="presentableId" value="Default" />
       <updated>1552740099626</updated>
       <workItem from="1552740101816" duration="5000" />
-      <workItem from="1552740135145" duration="9334000" />
+      <workItem from="1552740135145" duration="9411000" />
+      <workItem from="1552899576409" duration="6129000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9339000" />
+    <option name="totallyTimeSpent" value="15545000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.27951807" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -267,62 +254,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/pages/computing_data_ask.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-315">
-          <caret line="214" column="29" selection-start-line="214" selection-start-column="29" selection-end-line="214" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/pages/computing_model_ask.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3153">
-          <caret line="214" column="29" selection-start-line="214" selection-start-column="29" selection-end-line="214" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/pages/computing_train.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3212">
-          <caret line="246" column="29" selection-start-line="246" selection-start-column="29" selection-end-line="246" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/pages/computingclientwallet.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5118">
-          <caret line="345" column="29" selection-start-line="345" selection-start-column="29" selection-end-line="345" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/pages/createwallet.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="723">
-          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/pages/data_computing_agree.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3573">
-          <caret line="242" column="29" selection-start-line="242" selection-start-column="29" selection-end-line="242" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/pages/data_model_ask.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3573">
-          <caret line="242" column="29" selection-start-line="242" selection-start-column="29" selection-end-line="242" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/pages/dataclientwallet.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5793">
-          <caret line="390" column="29" selection-start-line="390" selection-start-column="29" selection-end-line="390" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/pages/download_tool.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3663">
@@ -348,13 +279,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5463">
           <caret line="368" column="29" selection-start-line="368" selection-start-column="29" selection-end-line="368" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/pages/model_available_data.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3468">
-          <caret line="235" column="29" selection-start-line="235" selection-start-column="29" selection-end-line="235" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -410,13 +334,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/js/constant.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="36" selection-start-column="36" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/pages/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-891">
@@ -424,45 +341,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/dataclient.js">
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/computingclient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state>
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-468">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/modelclient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+        <state relative-caret-position="48">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/pages/dataclientwallet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="494" column="20" lean-forward="true" selection-start-line="494" selection-start-column="20" selection-end-line="494" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/pages/data_model_ask.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4335">
+          <caret line="255" column="26" selection-start-line="255" selection-start-column="8" selection-end-line="255" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/pages/computing_data_ask.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3876">
+          <caret line="228" column="32" selection-start-line="228" selection-start-column="32" selection-end-line="228" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/pages/computing_model_ask.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="228" column="32" selection-start-line="228" selection-start-column="32" selection-end-line="228" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/pages/createwallet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-84">
+          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/js/constant.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/pages/computingclientwallet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-529">
+          <caret line="345" column="29" selection-start-line="345" selection-start-column="29" selection-end-line="345" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/pages/computing_train.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-105">
+          <caret line="246" column="29" selection-start-line="246" selection-start-column="29" selection-end-line="246" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/dataclient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="214" column="3" selection-start-line="214" selection-start-column="3" selection-end-line="214" selection-end-column="3" />
+          <folding>
+            <element signature="e#1066#1496#0" />
+            <element signature="e#1557#2200#0" />
+            <element signature="e#2259#2779#0" />
+            <element signature="e#2833#3345#0" />
+            <element signature="e#3397#3809#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/pages/model_available_data.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="251" column="34" selection-start-line="251" selection-start-column="34" selection-end-line="251" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/computingclient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="133" column="3" selection-start-line="133" selection-start-column="3" selection-end-line="133" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/modelclient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="111" column="3" selection-start-line="111" selection-start-column="3" selection-end-line="111" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/pages/data_computing_agree.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="255" column="28" selection-start-line="255" selection-start-column="28" selection-end-line="255" selection-end-column="28" />
         </state>
       </provider>
     </entry>

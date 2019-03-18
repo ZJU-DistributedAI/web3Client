@@ -34,30 +34,41 @@ router.get('/modelaskingpage', function(req, res, next) {
 });
 
 
-
-router.post('/uploadfile', function (req, res) {
-    var response;
-    //todo
-    response = completeRes("",200);
-    res.end(response);
-});
-
 router.post('/addmetadata', function (req, res) {
     var response;
     var password = req.body.password;
     var from = req.body.from;
     var metaDataIpfsHash = req.body.metaDataIpfsHash;
-
     if(password === undefined || password === ''||
         metaDataIpfsHash===undefined|| metaDataIpfsHash===''||
         from ===undefined|| from ==='') {
         response = completeRes("参数不完全", 201);
+        res.end(response);
     }
     else {
-        //todo  发起交易到以太坊 数据方上传数据到区块链
-
+        privateKey = new Buffer(password, 'hex');
+        txData = "dadd:" + metaDataIpfsHash;
+        var number = web3.eth.getTransactionCount(from).then(function (number) {
+            number = number.toString(16);
+            rawTx = {
+                nonce: '0x' + number,
+                gasPrice: '0x09184e72a000',
+                gasLimit: '0x271000',
+                to: DataTransactionTo,
+                value: '0x00',
+                data: txData,
+            };
+            tx = new Tx(rawTx);
+            tx.sign(privateKey);
+            serializedTx = tx.serialize();
+            web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
+                .then(function (data) {
+                    response = completeRes(data.transactionHash, 200);
+                    res.end(response);
+                });
+        });
     }
-    res.end(response);
+
 });
 
 
@@ -96,12 +107,31 @@ router.post('/aggreemodelclient', function (req, res) {
         modelAddress===undefined|| modelAddress===''||
         from ===undefined|| from ==='') {
         response = completeRes("参数不完全", 201);
+        res.end(response);
     }
     else {
-        //todo  数据方同意交易创建
-
+        privateKey = new Buffer(password, 'hex');
+        txData = "dagree:" + metaDataIpfsHash + ":" + modelAddress;
+        web3.eth.getTransactionCount(from).then(function (number) {
+            number = number.toString(16);
+            rawTx = {
+                nonce: '0x' + number,
+                gasPrice: '0x09184e72a000',
+                gasLimit: '0x271000',
+                to: DataTransactionTo,
+                value: '0x00',
+                data: txData,
+            };
+            tx = new Tx(rawTx);
+            tx.sign(privateKey);
+            serializedTx = tx.serialize();
+            web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
+                .then(function (data) {
+                    response = completeRes(data.transactionHash, 200);
+                    res.end(response);
+                });
+        });
     }
-    res.end(response);
 });
 
 
@@ -117,12 +147,32 @@ router.post('/askcomputing', function (req, res) {
         modelAddress===undefined|| modelAddress===''||
         from ===undefined|| from ==='') {
         response = completeRes("参数不完全", 201);
+        res.end(response);
     }
     else {
-        //todo  数据方请求运算方的运算资源
-
+        privateKey = new Buffer(password, 'hex');
+        txData = "dcomputing:" + computingHash + ":" + modelAddress;
+        web3.eth.getTransactionCount(from).then(function (number) {
+            number = number.toString(16);
+            rawTx = {
+                nonce: '0x' + number,
+                gasPrice: '0x09184e72a000',
+                gasLimit: '0x271000',
+                to: DataTransactionTo,
+                value: '0x00',
+                data: txData,
+            };
+            tx = new Tx(rawTx);
+            tx.sign(privateKey);
+            serializedTx = tx.serialize();
+            web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
+                .then(function (data) {
+                    response = completeRes(data.transactionHash, 200);
+                    res.end(response);
+                });
+        });
     }
-    res.end(response);
+
 });
 
 
@@ -130,33 +180,39 @@ router.post('/deletedata', function (req, res) {
     var response;
     var password = req.body.password;
     var from = req.body.from;
-    var metadataHash = req.body.metadataHash;
+    var metadataHash = req.body.metaDataIpfsHash;
 
 
     if(password === undefined || password === ''||
         metadataHash===undefined|| metadataHash===''||
         from ===undefined|| from ==='') {
         response = completeRes("参数不完全", 201);
+        res.end(response);
     }
     else {
-        //todo  数据方删除metadDataHash
+        privateKey = new Buffer(password, 'hex');
+        txData = "ddelete:" + metadataHash;
+        web3.eth.getTransactionCount(from).then(function (number) {
+            number = number.toString(16);
+            rawTx = {
+                nonce: '0x' + number,
+                gasPrice: '0x09184e72a000',
+                gasLimit: '0x271000',
+                to: DataTransactionTo,
+                value: '0x00',
+                data: txData,
+            };
+            tx = new Tx(rawTx);
+            tx.sign(privateKey);
+            serializedTx = tx.serialize();
+            web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
+                .then(function (data) {
+                    response = completeRes(data.transactionHash, 200);
+                    res.end(response);
+                });
+        });
     }
-    res.end(response);
 });
-
-
-router.post('/monitormetadata', function (req, res) {
-    var response;
-    // todo 监听是否有模型方提交的metadata交易
-    res.end(response);
-});
-
-router.post('/monitorcomputingaggree', function (req, res) {
-    var response;
-    // todo 数据方监听是否有运算方的同意交易
-    res.end(response);
-});
-
 
 
 module.exports = router;

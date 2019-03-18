@@ -253,7 +253,7 @@
     }
     //前端Ajax持续调用服务端，称为Ajax轮询技术
     var gettingComputingAgree = {
-    url:interfaceAddress+'/data/client/monitormetadata',
+    url:getMonitorServer()+'/data/client/monitormetadata',
         type:'post',
         dataType : 'text', // use json instead of text
         data:"",

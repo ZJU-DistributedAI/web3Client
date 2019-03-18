@@ -505,7 +505,7 @@
               var fd = new FormData();
               fd.append('uploadfile', file_obj);
               $.ajax({
-                  url:interfaceAddress+'/dataclient/uploadfile',
+                  url:getIpfsAddres()+'/dataclient/uploadfile',
                   type: 'post',
                   data: fd,
                   processData:false,

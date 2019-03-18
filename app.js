@@ -10,6 +10,7 @@ var dataClientRouter = require('./routes/dataclient');
 var modelClientRouter = require('./routes/modelclient');
 var computingClientRouter = require('./routes/computingclient');
 var Web3 = require('web3');
+var Tx = require('ethereumjs-tx');
 
 var app = express();
 
@@ -37,7 +38,7 @@ app.use(function(req, res, next) {
 
 // error handler
 app.use(function(err, req, res, next) {
-    res.sendfile(__dirname + '/routes/pages/404.html');
+    res.sendFile(__dirname + '/routes/pages/404.html');
 });
 
 // web3 define
@@ -48,8 +49,12 @@ if (typeof web3 !== 'undefined') {
 } else {
     // set the provider you want from Web3.providers
     web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
-    console.log("web3 == 'undefined'  and localhost:8545");
 }
 
+
 global.web3 = web3;
+global.Tx = Tx;
+global.DataTransactionTo = "0xb1012acadcdf1c462c0f6b665e84d892e1f4bcf9";
+global.ModelTransactionTo = "0x7c5e1facd0af1c562c2d03eeade47e1c7e695ca6";
+global.ComputingTransactionTo = "0x25127a6a0c6dcdd431425aa1929f93e339039ed1";
 module.exports = app;

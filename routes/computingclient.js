@@ -133,16 +133,4 @@ router.post('/monitordata', function (req, res) {
     res.end(response);
 });
 
-router.post('/monitormodel', function (req, res) {
-    var response;
-    // todo
-    res.end(response);
-});
-
-router.post('/getdockerstatus', function (req, res) {
-    var response;
-    // todo
-    res.end(response);
-});
-
 module.exports = router;
