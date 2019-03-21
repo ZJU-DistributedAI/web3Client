@@ -258,7 +258,7 @@
       function TrainAsk(){
 
           var gettingTrainResult = {
-              url:interfaceAddress+'/computingclient/train',
+              url:getTrainServer()+'/computingclient/train',
               type:'post',
               dataType : 'text', // use json instead of text
               data: "modelIpfsHash="+$('#train_modelIpfsHash').val()+"&train_modelFrom="+$('#train_modelFrom').val()

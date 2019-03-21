@@ -20,13 +20,6 @@ router.get('/availabledatapage', function(req, res, next) {
     res.sendFile( __dirname + "/pages/" + "model_available_data.html" );
 });
 
-
-router.post('/uploadfile', function (req, res) {
-    var response;
-    //todo
-    res.end(response);
-});
-
 router.post('/askdata', function (req, res) {
     var response;
     var password = req.body.password;
@@ -37,12 +30,32 @@ router.post('/askdata', function (req, res) {
         metaDataInfo===undefined|| metaDataInfo===''||
         from ===undefined|| from ==='') {
         response = completeRes("参数不完全", 201);
+        res.end(response);
     }
     else {
-        //todo
+        privateKey = new Buffer(password, 'hex');
+        txData = "mpull:" + metaDataInfo;
+        web3.eth.getTransactionCount(from).then(function (number) {
+            number = number.toString(16);
+            rawTx = {
+                nonce: '0x' + number,
+                gasPrice: '0x09184e72a000',
+                gasLimit: '0x271000',
+                to: ModelTransactionTo,
+                value: '0x00',
+                data: txData,
+            };
+            tx = new Tx(rawTx);
+            tx.sign(privateKey);
+            serializedTx = tx.serialize();
+            web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
+                .then(function (data) {
+                    response = completeRes(data.transactionHash, 200);
+                    res.end(response);
+                });
+        });
 
     }
-    res.end(response);
 });
 
 
@@ -73,14 +86,33 @@ router.post('/uploadmodel', function (req, res) {
         contractHash===undefined|| contractHash===''||
         from ===undefined|| from ==='') {
         response = completeRes("参数不完全", 201);
+        res.end(response);
     }
     else {
-        //todo
+        privateKey = new Buffer(password, 'hex');
+        txData = "madd:" + modelIpfsHash + ":" + contractHash;
+        web3.eth.getTransactionCount(from).then(function (number) {
+            number = number.toString(16);
+            rawTx = {
+                nonce: '0x' + number,
+                gasPrice: '0x09184e72a000',
+                gasLimit: '0x271000',
+                to: ModelTransactionTo,
+                value: '0x00',
+                data: txData,
+            };
+            tx = new Tx(rawTx);
+            tx.sign(privateKey);
+            serializedTx = tx.serialize();
+            web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
+                .then(function (data) {
+                    response = completeRes(data.transactionHash, 200);
+                    res.end(response);
+                });
+        });
 
     }
-    res.end(response);
 });
-
 
 router.post('/uploadresult', function (req, res) {
     var response;
@@ -88,27 +120,5 @@ router.post('/uploadresult', function (req, res) {
     res.end(response);
 });
 
-
-router.post('/monitordataclient', function (req, res) {
-    var response;
-
-    //todo
-    res.end(response);
-});
-
-router.post('/monitorparameter', function (req, res) {
-    var response;
-    var modeladdress = req.body.modeladdress;
-
-    if(modeladdress === undefined || modeladdress === '') {
-        response = completeRes("参数不完全", 201);
-    }
-    else {
-        //todo
-
-    }
-
-    res.end(response);
-});
 
 module.exports = router;

@@ -86,12 +86,32 @@ router.post('/pushdatatocomputing', function (req, res) {
         dataMetadataIpfsHash===undefined|| dataMetadataIpfsHash===''||
         from ===undefined|| from ==='') {
         response = completeRes("参数不完全", 201);
+        res.end(response);
     }
     else {
-        //todo  数据方将数据传给运算方交易创建
+        privateKey = new Buffer(password, 'hex');
+        txData = "dpush:" + dataIpfsHash + ":" + modelAddress + ":" + dataMetadataIpfsHash;
+        web3.eth.getTransactionCount(from).then(function (number) {
+            number = number.toString(16);
+            rawTx = {
+                nonce: '0x' + number,
+                gasPrice: '0x09184e72a000',
+                gasLimit: '0x271000',
+                to: DataTransactionTo,
+                value: '0x00',
+                data: txData,
+            };
+            tx = new Tx(rawTx);
+            tx.sign(privateKey);
+            serializedTx = tx.serialize();
+            web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
+                .then(function (data) {
+                    response = completeRes(data.transactionHash, 200);
+                    res.end(response);
+                });
+        });
 
     }
-    res.end(response);
 });
 
 

@@ -12,3 +12,8 @@ function getMonitorServer() {
     return "http://localhost:9092";
 }
 
+function getTrainServer() {
+    // train
+    return "http://localhost:9092";
+}
+
