@@ -198,6 +198,24 @@
           </div>
         </div>
 
+
+            <div class="card mb-3">
+                <div class="card-header">查询账户余额</div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <div class="form-label-group">
+                                <input name="checkbalance_from" type="text" id="checkbalance_from" class="form-control" required="required" autofocus="autofocus" >
+                                <label for="checkbalance_from">wallet: 数据方钱包地址 </label>
+                            </div>
+
+                        </div>
+
+                        <button id= "CheckbalanceForm" class="btn btn-primary btn-block" type="button">Submit</button>
+                    </form>
+                </div>
+            </div>
+
         <div class="card mb-3">
             <div class="card-header">同意模型方对数据的请求</div>
             <div class="card-body">
@@ -519,6 +537,27 @@
               });
               return false;
           });
+
+          $("#CheckbalanceForm").on('click', function() {  //添加点击事件
+              console.log("click CheckbalanceForm  ok");
+              $.ajax({
+                  url:interfaceAddress + '/dataclient/checkbalance',
+                  type:'post',
+                  dataType : 'text',
+                  data: "from="+$('#checkbalance_from').val(),
+                  success : function(data){
+                      console.log(data);
+                      var jsonObj = $.parseJSON(data);
+                      alert(jsonObj.msg);
+                  },
+                  fail : function (data) {
+                      console.log(data);
+                      alert("请求失败");
+                  }
+              });
+          });
+
+
       })
   </script>
 

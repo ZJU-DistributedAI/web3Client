@@ -50,6 +50,9 @@ if (typeof web3 !== 'undefined') {
     // set the provider you want from Web3.providers
     web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 }
+var tempAccount = "0x56e6ef2594fddfdcc7a29eeceddc913ad3bc734a";
+console.log(tempAccount)
+web3.eth.getBalance(tempAccount).then(console.log);
 
 
 global.web3 = web3;

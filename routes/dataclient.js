@@ -155,6 +155,24 @@ router.post('/aggreemodelclient', function (req, res) {
 });
 
 
+router.post('/checkbalance', function (req, res) {
+    var response;
+    var currentAccount = req.body.from;
+
+    if(currentAccount ===undefined|| currentAccount ==='') {
+        response = completeRes("参数不完全", 201);
+        res.end(response);
+    }
+    else {
+        // 查询以太币余额
+        web3.eth.getBalance(currentAccount).then(function (data) {
+            console.log(data);
+            response = completeRes(data, 200);
+            res.end(response);
+        });
+    }
+});
+
 router.post('/askcomputing', function (req, res) {
     var response;
     var password = req.body.password;

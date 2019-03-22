@@ -198,6 +198,22 @@
           </div>
         </div>
 
+            <div class="card mb-3">
+                <div class="card-header">查询账户余额</div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <div class="form-label-group">
+                                <input name="checkbalance_from" type="text" id="checkbalance_from" class="form-control" required="required" autofocus="autofocus" >
+                                <label for="checkbalance_from">wallet: 数据方钱包地址 </label>
+                            </div>
+
+                        </div>
+
+                        <button id= "CheckbalanceForm" class="btn btn-primary btn-block" type="button">Submit</button>
+                    </form>
+                </div>
+            </div>
         <div class="card mb-3">
             <div class="card-header">同意数据方对运算资源的请求</div>
             <div class="card-body">
@@ -257,40 +273,40 @@
 
 
 
-        {{/*<div class="card mb-3">*/}}
-            {{/*<div class="card-header">Upload Encrypted Data</div>*/}}
-            {{/*<div class="card-body">*/}}
-             {{/*<form>*/}}
-              {{/*<div class="form-group">*/}}
-                {{/*<div class="form-label-group">*/}}
-                  {{/*<input name="upload_ETH_key" type="text" id="upload_ETH_key" class="form-control" required="required" autofocus="autofocus" >*/}}
-                  {{/*<label for="upload_ETH_key">ETH_key: ETH private key for transaction </label>*/}}
-               {{/**/}}
-                {{/*</div>*/}}
-                  {{/*</br>*/}}
-                {{/*<div class="form-label-group">*/}}
-                   {{/*<input name="upload_aes_hash" type="text" id="upload_aes_hash" class="form-control" required="required" autofocus="autofocus" >*/}}
-                  {{/*<label for="upload_aes_hash">aes_hash: encrypted aes key hash</label>*/}}
-                {{/*</div>*/}}
+        <!--{{/*<div class="card mb-3">*/}}-->
+            <!--{{/*<div class="card-header">Upload Encrypted Data</div>*/}}-->
+            <!--{{/*<div class="card-body">*/}}-->
+             <!--{{/*<form>*/}}-->
+              <!--{{/*<div class="form-group">*/}}-->
+                <!--{{/*<div class="form-label-group">*/}}-->
+                  <!--{{/*<input name="upload_ETH_key" type="text" id="upload_ETH_key" class="form-control" required="required" autofocus="autofocus" >*/}}-->
+                  <!--{{/*<label for="upload_ETH_key">ETH_key: ETH private key for transaction </label>*/}}-->
+               <!--{{/**/}}-->
+                <!--{{/*</div>*/}}-->
+                  <!--{{/*</br>*/}}-->
+                <!--{{/*<div class="form-label-group">*/}}-->
+                   <!--{{/*<input name="upload_aes_hash" type="text" id="upload_aes_hash" class="form-control" required="required" autofocus="autofocus" >*/}}-->
+                  <!--{{/*<label for="upload_aes_hash">aes_hash: encrypted aes key hash</label>*/}}-->
+                <!--{{/*</div>*/}}-->
 
-                 {{/*</br>*/}}
-                {{/*<div class="form-label-group">*/}}
-                   {{/*<input name="upload_request_id" type="text" id="upload_request_id" class="form-control" required="required" autofocus="autofocus" >*/}}
-                  {{/*<label for="upload_request_id">request_id: request_id</label>*/}}
-                {{/*</div>*/}}
+                 <!--{{/*</br>*/}}-->
+                <!--{{/*<div class="form-label-group">*/}}-->
+                   <!--{{/*<input name="upload_request_id" type="text" id="upload_request_id" class="form-control" required="required" autofocus="autofocus" >*/}}-->
+                  <!--{{/*<label for="upload_request_id">request_id: request_id</label>*/}}-->
+                <!--{{/*</div>*/}}-->
 
-                 {{/*</br>*/}}
-                {{/*<div class="form-label-group">*/}}
-                   {{/*<input name="upload_res_hash" type="text" id="upload_res_hash" class="form-control" required="required" autofocus="autofocus" >*/}}
-                  {{/*<label for="upload_res_hash">res_hash: encrypted result hash</label>*/}}
-                {{/*</div>*/}}
+                 <!--{{/*</br>*/}}-->
+                <!--{{/*<div class="form-label-group">*/}}-->
+                   <!--{{/*<input name="upload_res_hash" type="text" id="upload_res_hash" class="form-control" required="required" autofocus="autofocus" >*/}}-->
+                  <!--{{/*<label for="upload_res_hash">res_hash: encrypted result hash</label>*/}}-->
+                <!--{{/*</div>*/}}-->
 
-              {{/*</div>*/}}
+              <!--{{/*</div>*/}}-->
 
-              {{/*<button id="UploadEncryptedData" class="btn btn-primary btn-block" type="button">Submit</button>*/}}
-             {{/*</form>*/}}
-          {{/*</div>*/}}
-        {{/*</div>*/}}
+              <!--{{/*<button id="UploadEncryptedData" class="btn btn-primary btn-block" type="button">Submit</button>*/}}-->
+             <!--{{/*</form>*/}}-->
+          <!--{{/*</div>*/}}-->
+        <!--{{/*</div>*/}}-->
 
 
 
@@ -417,7 +433,7 @@
           $("#Train").on('click', function() {  //添加点击事件
               console.log("click Train ok");
               $.ajax({
-                  url:'http://127.0.0.1:3000/computingclient/Train',
+                  url:interfaceAddress+'/computingclient/Train',
                   type:'post',
                   dataType : 'text', // use json instead of text
                   data: "computing_hash="+$('#train_computing_hash').val()+"&contract_hash="+$('#train_contract_hash').val()
@@ -438,7 +454,7 @@
           $("#UploadEncryptedData").on('click', function() {  //添加点击事件
               console.log("click UploadEncryptedData ok");
               $.ajax({
-                  url:'http://127.0.0.1:3000/computingclient/UploadEncryptedData',
+                  url:interfaceAddress+'/computingclient/UploadEncryptedData',
                   type:'post',
                   dataType : 'text', // use json instead of text
                   data: "ETH_key="+$('#upload_ETH_key').val()+"&aes_hash="+$('#upload_aes_hash').val()
@@ -461,7 +477,7 @@
               var fd = new FormData();
               fd.append('uploadfile', file_obj);
               $.ajax({
-                  url:getIpfsAddres()+'/dataclient/uploadfile',
+                  url:interfaceAddress+'/computingclient/uploadfile',
                   type: 'post',
                   data: fd,
                   processData:false,
@@ -473,6 +489,25 @@
                   }
               });
               return false;
+          });
+
+          $("#CheckbalanceForm").on('click', function() {  //添加点击事件
+              console.log("click CheckbalanceForm  ok");
+              $.ajax({
+                  url:interfaceAddress + '/computingclient/checkbalance',
+                  type:'post',
+                  dataType : 'text',
+                  data: "from="+$('#checkbalance_from').val(),
+                  success : function(data){
+                      console.log(data);
+                      var jsonObj = $.parseJSON(data);
+                      alert(jsonObj.msg);
+                  },
+                  fail : function (data) {
+                      console.log(data);
+                      alert("请求失败");
+                  }
+              });
           });
       })
   </script>

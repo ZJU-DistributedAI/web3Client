@@ -192,8 +192,25 @@
           </div>
         </div>
 
+          <div class="card mb-3">
+            <div class="card-header">查询账户余额</div>
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <div class="form-label-group">
+                    <input name="checkbalance_from" type="text" id="checkbalance_from" class="form-control" required="required" autofocus="autofocus" >
+                    <label for="checkbalance_from">wallet: 数据方钱包地址 </label>
+                  </div>
+
+                </div>
+
+                <button id= "CheckbalanceForm" class="btn btn-primary btn-block" type="button">Submit</button>
+              </form>
+            </div>
+          </div>
+
         <div class="card mb-3">
-            <div class="card-header">Create Contract</div>
+            <div class="card-header">创建智能合约</div>
             <div class="card-body">
              <form >
               <div class="form-group">
@@ -255,12 +272,12 @@
             <div class="card-body">
               <form >
                 <div class="form-group">
-                  {{/*<div class="form-label-group">*/}}
-                    {{/*<input name="param_from" type="text" id="upload_from" class="form-control" required="required" autofocus="autofocus" >*/}}
-                    {{/*<label for="param_from">wallet: 模型方的钱包地址 </label>*/}}
+                  <!--<div class="form-label-group">-->
+                    <!--<input name="param_from" type="text" id="param_from" class="form-control" required="required" autofocus="autofocus" >-->
+                    <!--<label for="param_from">wallet: 模型方的钱包地址 </label>-->
 
-                  {{/*</div>*/}}
-                  {{/*</br>*/}}
+                  <!--</div>-->
+                  <!--</br>-->
 
                   <div class="form-label-group">
                     <input name="param_password" type="text" id="param_password" class="form-control" required="required" autofocus="autofocus" >
@@ -275,45 +292,43 @@
           </div>
 
 
- 	{{/**/}}
+    <!--{{/*<div class="card mb-3">*/}}-->
+            <!--{{/*<div class="card-header">Upload Result</div>*/}}-->
+            <!--{{/*<div class="card-body">*/}}-->
+             <!--{{/*<form>*/}}-->
+              <!--{{/*<div class="form-group">*/}}-->
+                <!--{{/*<div class="form-label-group">*/}}-->
+                  <!--{{/*<input name="uploadFinal_ETH_key" type="text" id="uploadFinal_ETH_key" class="form-control" required="required" autofocus="autofocus" >*/}}-->
+                  <!--{{/*<label for="uploadFinal_ETH_key">ETH_key: ETH private key for transaction </label>*/}}-->
+               <!--{{/**/}}-->
+                <!--{{/*</div>*/}}-->
+                  <!--{{/*</br>*/}}-->
 
-    {{/*<div class="card mb-3">*/}}
-            {{/*<div class="card-header">Upload Result</div>*/}}
-            {{/*<div class="card-body">*/}}
-             {{/*<form>*/}}
-              {{/*<div class="form-group">*/}}
-                {{/*<div class="form-label-group">*/}}
-                  {{/*<input name="uploadFinal_ETH_key" type="text" id="uploadFinal_ETH_key" class="form-control" required="required" autofocus="autofocus" >*/}}
-                  {{/*<label for="uploadFinal_ETH_key">ETH_key: ETH private key for transaction </label>*/}}
-               {{/**/}}
-                {{/*</div>*/}}
-                  {{/*</br>*/}}
+                <!--{{/*<div class="form-label-group">*/}}-->
+                <!--{{/*<input name="uploadFinal_hash" type="text" id="uploadFinal_hash" class="form-control" required="required" autofocus="autofocus" >*/}}-->
+                <!--{{/*<label for="uploadFinal_hash">hash: final arguments hash</label>*/}}-->
+             <!--{{/**/}}-->
+                <!--{{/*</div>*/}}-->
+                 <!--{{/*</br>*/}}-->
 
-                {{/*<div class="form-label-group">*/}}
-                {{/*<input name="uploadFinal_hash" type="text" id="uploadFinal_hash" class="form-control" required="required" autofocus="autofocus" >*/}}
-                {{/*<label for="uploadFinal_hash">hash: final arguments hash</label>*/}}
-             {{/**/}}
-                {{/*</div>*/}}
-                 {{/*</br>*/}}
+                <!--{{/*<div class="form-label-group">*/}}-->
+                <!--{{/*<input name="uploadFinal_rsa_key" type="text" id="uploadFinal_rsa_key" class="form-control" required="required" autofocus="autofocus" >*/}}-->
+                <!--{{/*<label for="uploadFinal_rsa_key">rsa_key: rsa private key for transaction id </label>*/}}-->
+               <!--{{/**/}}-->
+                <!--{{/*</div>*/}}-->
+                <!--{{/*</br>*/}}-->
 
-                {{/*<div class="form-label-group">*/}}
-                {{/*<input name="uploadFinal_rsa_key" type="text" id="uploadFinal_rsa_key" class="form-control" required="required" autofocus="autofocus" >*/}}
-                {{/*<label for="uploadFinal_rsa_key">rsa_key: rsa private key for transaction id </label>*/}}
-               {{/**/}}
-                {{/*</div>*/}}
-                {{/*</br>*/}}
+                <!--{{/*<div class="form-label-group">*/}}-->
+                   <!--{{/*<input name="uploadFinal_trans_id" type="text" id="uploadFinal_trans_id" class="form-control" required="required" autofocus="autofocus" >*/}}-->
+                  <!--{{/*<label for="uploadFinal_trans_id">trans_id: transaction_id</label>*/}}-->
+                <!--{{/*</div>*/}}-->
 
-                {{/*<div class="form-label-group">*/}}
-                   {{/*<input name="uploadFinal_trans_id" type="text" id="uploadFinal_trans_id" class="form-control" required="required" autofocus="autofocus" >*/}}
-                  {{/*<label for="uploadFinal_trans_id">trans_id: transaction_id</label>*/}}
-                {{/*</div>*/}}
+              <!--{{/*</div>*/}}-->
 
-              {{/*</div>*/}}
-
-              {{/*<button id="UploadResult" class="btn btn-primary btn-block" type="button">Submit</button>*/}}
-             {{/*</form>*/}}
-          {{/*</div>*/}}
-        {{/*</div>*/}}
+              <!--{{/*<button id="UploadResult" class="btn btn-primary btn-block" type="button">Submit</button>*/}}-->
+             <!--{{/*</form>*/}}-->
+          <!--{{/*</div>*/}}-->
+        <!--{{/*</div>*/}}-->
 
 
 
@@ -495,6 +510,25 @@
             });
             return false;
           });
+
+        $("#CheckbalanceForm").on('click', function() {  //添加点击事件
+          console.log("click CheckbalanceForm  ok");
+          $.ajax({
+            url:interfaceAddress + '/modelclient/checkbalance',
+            type:'post',
+            dataType : 'text',
+            data: "from="+$('#checkbalance_from').val(),
+            success : function(data){
+              console.log(data);
+              var jsonObj = $.parseJSON(data);
+              alert(jsonObj.msg);
+            },
+            fail : function (data) {
+              console.log(data);
+              alert("请求失败");
+            }
+          });
+        });
 
 
       })
